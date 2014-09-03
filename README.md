@@ -5,92 +5,59 @@
   type: lab
 ---
 
-## Git Workshop
+## Github Workshop
 
-The goals of the workshop are to get you comfortable with git. Git is a distributed version control and source code management system. 
+The goal of the workshop is to introduce you to Github, set up your github account and add the code that we created in the last lab to Github. We use [Github](https://github.com/) to store all of our code and share it with others. Github is a web-based software for hosting your code, as well as version control, through git.
 
-So what does that mean? Version control is a way to save the history of your work. At every point while writing your code that something works successfully, you'll want to make sure to save that point. Git keeps track of all of those moments that you save. Imagine you keep working, and suddenly EVERYTHING is broken. What would you do? If you used git and saved your work along the way, you could essentially rewind your code history to a working version.
+### Let's set up an account.
 
-We use [Github](https://github.com/) to store all of our code. Github is a web-based software for hosting your code, as well as version control, through git. We're going to be using the accounts we made during environment setup for all of our lab work, as well as any projects we may be working on.
+Go to Github, and fill out the form to create a username and click signup. You will need to then check your email to verify your new account by clicking a link in an email.
 
-### So let's actually start a project.
+Next we'll need to set up your SSH key. 
 
-1. First things first, we need to create directory for our project on our computers that will hold our code. It's considered best practice to hold single projects in their own directories. You wouldn't want to just have everything floating separately on your desktop. Let's make a directory for our project and `cd` into it:
+### Setting Up Github SSH Keys
 
-`mkdir my_website`
-`cd my_website`
+An SSH key is how github can identify you without you having to enter your username and password every single time you want to push code up to the server. Github has a great online documention [here](https://help.github.com/articles/generating-ssh-keys).
 
-2. Now that we're in the project, we need to initialize a new git repository. A repository is the git version of our project directory. We have to initialize it on our own computer so that git can start tracking our work. We're basically saying "Hey computer, this is a new git project." Let's do that:
+The first thing you'll need to do is open terminal and make sure you're at your root directory. It will look like `~`. If you're not there, `cd ~` will move you to the root directory.
 
-`git init` 
+Then we want to look and see if we have a .ssh directory. `ls -la` will show you all the hidden files. If you don't even have a `.ssh` directory, you can make it `mkdir .ssh`
 
-`git init` creates a `.git` file in your new git project, which contains all the information git needs to sync the local version of your project (the one on your personal computer), with the version on github.com
+Now we need to generate the SSH key, `ssh-keygen -t rsa -C "your_email@example.com"`. You'll need to enter the same email address that you used to set up your github account between the quotation marks.
 
-3. Now we're going to create a `README.md` file. A README is a considered best practices, and we should make one for every project we work on. It tells anyone that is looking at your project exactly what it is that they're looking at, and potentially how to use it. Notice all the instructions for this code-along are in a `README.md`. Let's make a `README.md`, open it, and include a few instructions...
+You'll get prompted to type the password to your computer twice (the letters won't actually show up when you type. Don't worry, it's just for security purposes).
 
-`touch README.md`
-`subl README.md` 
+Once the SSH key generation is done, you'll enter `ssh-add ~/.ssh/id_rsa`
 
-"This is my personal portfolio. This site will include contact information, a personal bio, and links to all of my work"
+Then `pbcopy < ~/.ssh/id_rsa.pub` which just adds your SSH key to your clipboard.
 
-4. Now let's see if git noticed that we made changes to our `README.md`. `git status` tells us what files we have changed. It keeps track of files in two different ways, files that are not staged for commit, and files that are staged for committing.
+Then you'll need to go to your github account online, and in the top right corner select Account Settings (the symbol with the wrench). In the left toolbar, you'll select SSH Keys. Then you'll select `Add SSH Key`.
 
-5. Now that we've finished editing our README, we want our file to be staged for commit. `git add <file-name>` is how we stage a file. Staging a file for commit is sort of like getting the actors for a play ready behind the curtain. They have to hang out for just a few more minutes before they're all set to go. But what if we did `git add <file-name>` but we actually realize we want to make some changes? That's ok. Just go ahead a make your changes. And after you make those changes, enter `git status` you'll notice the file is no longer staged for commit. It's like that actor suddenly had a wardrobe malfunction and had to run back to his dressing room to get it fixed. Just enter `git add <file-name>` one last time. 
+You'll enter a name of `Github SSH` and then paste your SSH key into the `key` field. Then you'll click the green `Add Key` button.
 
-6. So this time you're actually ready to save that version of your file. Type `git commit -m "the reason I'm saving this goes here"`. We're actually committing the file now. A commit is just like saving your file. It's like taking a snapshot of your code at that exact moment in time. Git keeps track of all the commits you make, sort of like Microsoft word track-changes does. When you edit a Word file with track-changes, you always enter a comment of why you're changing that line. We do the same thing with commits. The `-m` is saying "I'm going to include a commit message here". 
-`git commit -m "I added my personal site readme"`.
+After that, you'll want to go back to terminal and verify that you successfull added the SSH key, `ssh -T git@github.com`. You should get back `Hi username! You've successfully authenticated, but GitHub does not provide shell access.`
 
-7. Now that git knows about our files, we're going to want to put it up on Github.com, so everyone can see what we've been working on, and if anything ever happens to our computers, our code is still accessible. 
+### Setting up your project in Github
 
-Because this is a new project, we'll need to set up our remote repository, aka the version located on github.com. We need to go to https://github.com, and click the `+` located in the top right corner. We'll select to create a new repository. We'll be directed to a page that let's us fill out information about our new repository. I like to keep my repository name consistent with what I named my directory on my computer. In this case I'd name it "personal_site". The description is optional, but I'll go ahead and fill out "This is my online portfolio". You can now either chose to make your repositories public or private. I typically make all of my repositories public, so everyone can see it. Open source contributions are incredibly valuable in the tech community. It allows other developers to learn from your work. It also creates a nice history of your work, so potentially down the line when you're looking for internships or jobs, employers can get a good look at all the code you've written. You also have to pay for private repositories, so we'll go ahead and keep it public. And now we'll click `Create Repository`.
+Because this is a new project, we'll need to set up our remote repository, aka the version located on github.com. We need to go to https://github.com, and click the `+` located in the top right corner and select "new repository". We'll be directed to a page that let's us fill out information about our new repository. It's a good idea to keep your repository name consistent with the directory on your computer. In this case you should name it "my_code". 
+
+The description is optional, but you can go ahead and fill out with something like "This is my code". You can now either chose to make your repositories public or private. I typically make all of my repositories public, so everyone can see it. Open source contributions are incredibly valuable in the tech community. It allows other developers to learn from your work. It also creates a nice history of your work, so potentially down the line when you're looking for internships or jobs, employers can get a good look at all the code you've written. You also have to pay for private repositories, so we'll go ahead and keep it public. And now we'll click `Create Repository`.
 
 8. At the top, next to "Set up in Desktop", you'll see a line that starts with git@github.com....That's the remote location for our project. Let's copy that. We need to set our local version of our project to point to that. In your terminal in the directory for our project, enter:
 
-`git remote add origin git@github.com:vicfriedman/my_site.git`
+`git remote add origin git@github.com:vicfriedman/my_code.git`
 
 `remote` tells our computer "we're adding the remote location"
 
 `origin` is the orginal remote repository, and we're telling it to be `git@github.com:vicfriedman/my_site.git`
 
-9. At this point, our `README.md` is still only located on our computer. Let's go ahead and put it up on the remote version. 
+9. At this point, our files are still only located on our computer. Let's go ahead and put them up on the remote version. 
 
 `git push -u origin master`
 
 This is the only time we'll enter this exact command, becuase it's the first time we're pushing our code to the server for this particular project. `push` is saying, go on code, get on up there. The `-u` means "upstream", which is just saying to go up to the github repository. 
 
-10. Let's go ahead and make the `index.html` page of our site.
-
-`touch index.html`
-`subl index.html`
-
-11. Now that I added some basic HTML and added a picture of a cat to the page, let's add, commit, and push this file up.
-
-`git add <file-name>`
-`git commit -m "created index.html"`
-`git push`
-
-12. `git log` is a powerful command that lets you see the history of all your commits. That's also part of why we like to include commit messages. Imagine you're working on a project with 5 other developers. Wouldn't you want them to be able to read a clear and concise message as to what you added to the code base and why? The 7 characters in front of your commit message is the SHA. The SHA is basically the unique identifier of that specific commit.
-
-13. So far, we've been working on what's considered the `master` branch. Master should always be the stable working version of your code. You never want to break master. This is considered a standard workflow, and is especially important to remember if you are working on a project with more than one developer. So where do you do your work then if you have to keep master stable? We create feature branches. 
-First, let's confirm we're on master. `git branch` is the command to check your branch location. It's like `pwd` for git.
-
-So now let's create our new feature branch, and then switch to it. To do this, we type `git checkout -b <branch-name>`. I'm going to name my branch "header", because I'm going to work on a header feature for my site. Now if we check the branch, it should tell us we're on the header branch.
-
-14. This branch split off from master after I had already created my readme and my index.html, so both of those files will exist on my new branch. Now let's add some things to my index.html. If we open it in the browser, we can see my name appears. Now, let's say I want to add a sub-header and a description, but I don't have enough time right now. I want to save my place though, so we'll go ahead and add, commit, and push these changes to a remote version of my branch.
-
-`git add <file-name>`
-`git commit -m "started working on header"`
-`git push origin header`
-
-My header branch didn't previously exist on github; that last command explicitly tells git to push to the remote location (origin) our new branch (header). 
-
-15. So let's go back to master `git checkout master` and open `index.html`. You'll notice my name no longer appears in the browser. Those changes only exist on my `header` branch.
-
-16. So now I decide I don't want to make any more changes to my header for the time being. We'll consider that feature complete. We need to merge those files in to master. To do this, we need to make sure we're on the master branch. Any time you're merging a feature branch into master, you'll want to be on master. 
-
-`git merge <branch-name>`
-
-Now if we reload index.html in the browser, we should see my name.
+Refresh the page on your github repository and check out the files you just added. Great job!
 
 17. So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's. Let's go to https://github.com/flatiron-school-curriculum/find-missing-pet. 
 
