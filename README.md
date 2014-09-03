@@ -59,16 +59,16 @@ This is the only time we'll enter this exact command, becuase it's the first tim
 
 Refresh the page on your github repository and check out the files you just added. Great job!
 
-17. So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's. Let's go to https://github.com/flatiron-school-curriculum/find-missing-pet. 
+17. So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's. Let's go to https://github.com/flatiron-school-curriculum/hs-git-website-lab. 
 
 There are two options for working on a project with someone else: forking and cloning. Cloning means your going to make an exact replica of the project on your computer, and it's going to point to that specific remote location. If you committed a change on master, it would show on master in their repository. Forking creates an exact replica of the project in your github account.
 
-18. Let's fork this lab https://github.com/flatiron-school-curriculum/find-missing-pet by clicking the `Fork` button in the top right corner. When we do that, we notice the location of the new forked repository is vicfriedman/find-missing-pet. So now that it exists on my github account, we have to clone the project to get it on my computer.
+18. Let's fork this lab https://github.com/flatiron-school-curriculum/hs-git-website-lab by clicking the `Fork` button in the top right corner. When we do that, we notice the location of the new forked repository is vicfriedman/hs-git-website-lab. So now that it exists on my github account, we have to clone the project to get it on my computer.
 
-`git clone git@github.com:vicfriedman/find-missing-pet.git`
+`git clone git@github.com:vicfriedman/hs-git-website-lab.git`
 
-19. Now that we have it up locally, we can cd into the project `cd find-missing-pet` and begin working on the lab!
+19. Now that we have it up locally, we can cd into the project `cd hs-git-website-lab` and begin working on the lab!
 
 <!-- After they complete the lab... -->
 
-20. Now that you completed your lab, make sure it's all pushed up to your version of the repository on github. After that, we're going to create a pull request. A pull request is the best practice for submitting contribution of work to an open source project. To create a pull request, go to your version of the repository on your github account. We'll click the green button in the top left corner. On the next page, we'll want to enter a comment for the pull request, "completed lab, all tests pass" and click submit. This is how I'll be able to review your work and give you feedback on your code. 
+20. Now that you completed your lab, make sure it's all pushed up to your version of the repository on github. After that, we're going to create a pull request. A pull request is the best practice for submitting contribution of work to an open source project. To create a pull request, go to your version of the repository on your github account. We'll click the green button in the top left corner. On the next page, we'll want to enter a comment for the pull request, "completed lab" and click submit. This is how I'll be able to review your work and give you feedback on your code. 
