@@ -50,15 +50,3 @@ So now that we've learned how to start and work on our own projects, let's learn
 * Now that we have it up locally, we can cd into the project `cd hs-git-website-lab` and begin working on the lab!
 
 <!-- After they complete the lab... -->
-
-### Wrapping up
-
-Now that you completed your lab, make sure it's all pushed up to your version of the repository on github. After that, we're going to create a pull request. A pull request is the best practice for submitting contribution of work to an open source project. 
-
-* To create a pull request, go to your version of the repository on your github account. 
-
-* Click the green button in the top left corner. 
-
-* On the next page, enter a comment for the pull request, like "completed lab" and click submit.
-
-* This is how we'll be able to review your work and give you feedback on your code. 
