@@ -23,7 +23,7 @@ The goal of the workshop is to add the code that we created in the last lab to G
 
 * Now you should see something that starts with git@github.com... That's the remote location for our project. We need to set our local version of our project to point to that. Copy that address and in your terminal in the directory for your project, enter:
 
-`git remote add origin git@github.com:<your github screenname>/my_code.git`
+`git remote add origin git@github.com:<your github username>/my_code.git`
 
 * `remote` tells our computer "we're adding the remote location"
 
