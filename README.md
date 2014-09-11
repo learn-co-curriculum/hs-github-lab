@@ -41,12 +41,5 @@ The goal of the workshop is to add the code that we created in the last lab to G
 
 So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's.
 
-* Go to https://github.com/flatiron-school-curriculum/hs-git-website-lab. 
+* Go to the Github Lab and follow the instructions. (Add the Ironboard link here?)
 
-* Fork this lab https://github.com/flatiron-school-curriculum/hs-git-website-lab by clicking the `Fork` button in the top right corner. When we do that, we notice the location of the new forked repository is vicfriedman/hs-git-website-lab. So now that it exists on my github account, we have to clone the project to get it on my computer.
-
-`git clone git@github.com:vicfriedman/hs-git-website-lab.git`
-
-* Now that we have it up locally, we can cd into the project `cd hs-git-website-lab` and begin working on the lab!
-
-<!-- After they complete the lab... -->
