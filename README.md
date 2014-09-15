@@ -7,7 +7,7 @@
 
 ## Github Workshop
 
-The goal of the workshop is to add the code that we created in the last lab to Github. We use [Github](https://github.com/) to store all of our code and share it with others. You should have already set up a Github account on day one of classes.
+The goal of the workshop is to add the code that we created in the last lab to Github. We use [Github](https://github.com/) to store all of our code and share it with others. You should have already set up a Github account at the beginning of class.
 
 ### Setting up your project on Github
 
