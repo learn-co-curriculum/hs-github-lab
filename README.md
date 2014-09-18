@@ -41,4 +41,4 @@ The goal of the workshop is to add the code that we created in the last lab to G
 
 So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's.
 
-Go to http://ironboard-experiment.herokuapp.com/admin/lessons/566 and follow the instructions.
+Go to the [Github Website Lab](http://ironboard-experiment.herokuapp.com/admin/lessons/566) and follow the instructions.
