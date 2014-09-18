@@ -23,7 +23,7 @@ The goal of the workshop is to add the code that we created in the last lab to G
 
 * Now you should see something that starts with git@github.com... That's the remote location for our project. We need to set our local version of our project to point to that. Copy that address and in your terminal in the directory for your project, enter:
 
-`git remote add origin git@github.com:<your github screenname>/my_code.git`
+`git remote add origin git@github.com:<your github username>/my_code.git`
 
 * `remote` tells our computer "we're adding the remote location"
 
@@ -41,12 +41,4 @@ The goal of the workshop is to add the code that we created in the last lab to G
 
 So now that we've learned how to start and work on our own projects, let's learn how to work on someone else's.
 
-* Go to http://ironboard-experiment.herokuapp.com/admin/lessons/566. 
-
-* Fork the lab by clicking the `Fork` button in the top right corner. When we do that, we notice the location of the new forked repository is `<your username>/hs-git-website-lab`. Now that it exists on your github account, you have to clone the project to get it on your computer.
-
-`git clone git@github.com:<your username>/hs-git-website-lab.git`
-
-* Now that we have it up locally, we can cd into the project `cd hs-git-website-lab` and begin working on the lab!
-
-<!-- After they complete the lab... -->
+Go to http://ironboard-experiment.herokuapp.com/admin/lessons/566 and follow the instructions.
