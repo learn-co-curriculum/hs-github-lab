@@ -21,7 +21,7 @@ The goal of this workshop is to add the code that we created in the last lab to 
 
 * Now click `Create Repository`.
 
-* You should see something that starts with `git@github.com...` That's the address for our project on Github. We need to set the local version of our project to point to that `remote` address so we can upload our code to github. Copy that SSH address, go to your terminal, make sure you are in your `git_practice` directory, and enter this command (using your personal `git@github` repositories address):
+* You should see you should see something that says "SSH clone URL" and a link that starts with git@github... (if you don't see this you should click on the blue SSH link). That's the address for our project on Github. We need to set the local version of our project to point to that `remote` address so we can upload our code to github. Copy that SSH address, go to your terminal, make sure you are in your `git_practice` directory, and enter this command (using your personal `git@github` repositories address):
 
 `git remote add origin git@github.com:<your github username>/git_practice.git`
 
