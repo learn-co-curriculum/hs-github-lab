@@ -25,12 +25,14 @@ The goal of this workshop is to add the code that we created in the last lab to 
 
 `git remote add origin git@github.com:<your github username>/git_practice.git`
 
-  This command is connecting the local version of our project to the `remote` address of our repository on github so we can upload our code to github.
+  This command is connecting the local version of your project to the `remote` address of your repository on github so you can upload our code to github.
 
 * Now you are ready to push up your code to Github with that second command: 
 
 `git push -u origin master`
 
-* This is the only time we'll enter this exact command, because it's the first time we're pushing our code to the server for this particular project. `push` is saying, go on code, get on up there. The `-u` means "upstream", which is just saying to go up to the github repository. If you get a message prompting you to type in yes/no, type in yes. After this you can push code up to this same repository with just `git push`.
+* This `push` command is telling the code, get on up there to github. The `-u` stands for "upstream", the `origin` indicates that this is the "original" repository created for this project, and `master` indicates that you are pushing this code to the master branch. If you get a message prompting you to type in yes/no, type in yes. 
+
+* We only use this extended command the first time that we push up code to a repository. After this first time you can push code up to this same repository with just `git push`.
 
 * Refresh the page on your github repository and check out the files you just added. Great job!
