@@ -33,6 +33,6 @@ The goal of this workshop is to add the code that we created in the last lab to 
 
 * This `push` command is telling the code, get on up there to github. The `-u` stands for "upstream", the `origin` indicates that this is the "original" repository created for this project, and `master` indicates that you are pushing this code to the master branch. If you get a message prompting you to type in yes/no, type in yes. 
 
-* We only use this extended command the first time that we push up code to a repository. After this first time you can push code up to this same repository with just `git push`.
+* We only use this extended command the first time that we push up code to a repository. After this you can push code up to this same repository with just the `git push` command.
 
 * Refresh the page on your github repository and check out the files you just added. Great job!
