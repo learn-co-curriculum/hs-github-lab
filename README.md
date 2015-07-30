@@ -1,9 +1,4 @@
----
-  tags: git, kids, github 
-  languages: git
-  level: 1
-  type: lab
----
+
 
 ## Github Workshop
 
