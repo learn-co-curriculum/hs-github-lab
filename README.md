@@ -31,3 +31,5 @@ The goal of this workshop is to add the code that we created in the last lab to 
 * We only use this extended command the first time that we push up code to a repository. After this you can push code up to this same repository with just the `git push` command.
 
 * Refresh the page on your github repository and check out the files you just added. Great job!
+
+<a href='https://learn.co/lessons/hs-github-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
