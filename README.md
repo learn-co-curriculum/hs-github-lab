@@ -32,4 +32,4 @@ The goal of this workshop is to add the code that we created in the last lab to 
 
 * Refresh the page on your github repository and check out the files you just added. Great job!
 
-<a href='https://learn.co/lessons/hs-github-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-github-lab' title='Github Workshop'>Github Workshop</a> on Learn.co and start learning to code for free.</p>
